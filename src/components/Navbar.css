@@ -1,0 +1,82 @@
+/* Navbar container */
+.navbar {
+    background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent dark background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px; /* Rounded corners */
+    width: 40%; /* Reduced navbar width */
+    margin: 0 auto; /* Centered horizontally */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Cover the white space with orange */
+  body {
+    background-color: #E5CA5A; /* Orange background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Navigation list */
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Space items evenly */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation items */
+  .nav-item {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .nav-item:hover {
+    color: #ffd700; /* Gold hover color */
+  }
+  
+  /* Active item underline */
+  .nav-item:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ffd700; /* Gold underline */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-item:hover:after {
+    width: 100%;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .navbar {
+      width: 90%; /* Navbar width for smaller screens */
+      padding: 10px 20px;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+  

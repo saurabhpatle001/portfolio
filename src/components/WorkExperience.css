@@ -1,0 +1,122 @@
+/* General Section Styling */
+.work-experience {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.work-experience h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Timeline Wrapper */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  max-width: 700px;
+}
+
+/* Vertical Line in the Timeline */
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ff9500;
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 30px 0;
+  position: relative; /* Ensure that child elements are positioned correctly */
+}
+
+/* Adjust timeline content for left and right positioning */
+.timeline-item:nth-child(odd) .timeline-content {
+  position: relative;
+  left: 80px; /* Shift odd items to the right */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  position: relative;
+  right: 80px; /* Shift even items to the left */
+}
+
+/* Icon (Orange Circle) */
+.timeline-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ff9500;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Content Box */
+.timeline-content {
+  padding: 20px 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 60%; /* Increased width of timeline item */
+}
+
+/* Remove Hover Effects */
+.timeline-item:hover .timeline-content {
+  transform: none; /* No transform on hover */
+  box-shadow: none; /* No shadow on hover */
+}
+
+.timeline-item:hover .timeline-icon {
+  transform: none; /* No transform on hover */
+  background-color: #ff9500; /* No color change */
+}
+
+/* Animations */
+/* Removed blink keyframe animation */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .timeline-content {
+    width: 75%; /* Ensure content doesn't take up too much space on smaller screens */
+  }
+
+  .timeline:before {
+    left: 10%;
+  }
+
+  .timeline-icon {
+    left: 10%;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    text-align: left;
+    left: 80px; /* Shift odd items more to the right on smaller screens */
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    text-align: left;
+    right: 80px; /* Shift even items more to the left on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+    width: 90%; /* Further adjustment for very small screens */
+  }
+}

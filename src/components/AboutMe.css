@@ -1,0 +1,100 @@
+.about-me {
+  /* height: 100px; */
+  padding: 50px 20px;
+  background-color: #070A0F;
+  background-image: url('https://images.unsplash.com/photo-1468436139062-f60a71c5c892?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: 30%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push elements to top and bottom */
+  /* height: 100vh;  */
+}
+
+.about-me h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: white; /* Set title text color to white */
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  width: 45%;
+}
+
+.left-column p, .right-column p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white; /* Set text color to white */
+}
+
+.left-column p strong, .right-column p strong {
+  color: white; /* Set strong text to white */
+}
+
+@media (max-width: 768px) {
+  .left-column,
+  .right-column {
+    width: 100%; /* Stacks columns vertically on smaller screens */
+  }
+}
+
+/* Social Media Bar */
+.social-media-bar {
+  display: flex; /* Aligns icons horizontally */
+  justify-content: center; /* Centers the icons */
+  gap: 20px; /* Adds space between icons */
+  padding: 20px 0; /* Adds vertical padding */
+  background-color: #CFCDD0; /* Background color for the bar */
+  border-radius: 50px; /* Adds rounded corners to the bar */
+  height: auto; /* Dynamically adjusts height */
+  width: 60%; /* Bar width */
+  margin: 0 auto; /* Centers the bar horizontally */
+  align-items: center; /* Vertically aligns icons */
+  position: relative; /* For positioning adjustments */
+}
+
+/* Individual Icon Layer */
+.social-media-bar .icon-layer {
+  display: flex; /* Centers the content */
+  align-items: center; /* Vertically centers the icons */
+  justify-content: center; /* Horizontally centers the icons */
+  width: 50px; /* Fixed width for each icon layer */
+  height: 50px; /* Fixed height for each icon layer */
+  background-color: #E5CA5A; /* Background color for the icon layer */
+  border-radius: 50%; /* Makes the layer circular */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Hover effects */
+}
+
+.social-media-bar .icon-layer:hover {
+  transform: scale(1.2); /* Enlarges the layer on hover */
+  background-color: #555; /* Changes the background color on hover */
+}
+
+/* Icon Styling */
+.social-media-bar .icon-layer i {
+  font-size: 1.5rem; /* Icon size */
+  color: white; /* Icon color */
+}
+
+/* Responsive Design for Social Media Bar */
+@media (max-width: 768px) {
+  .social-media-bar {
+    flex-wrap: wrap; /* Wrap icons on smaller screens */
+    gap: 15px; /* Reduce spacing between icons */
+    width: 90%; /* Adjusts width for smaller screens */
+  }
+
+  .social-media-bar .icon-layer {
+    width: 40px; /* Smaller size for the icon layers */
+    height: 40px;
+    font-size: 1rem; /* Smaller icons */
+  }
+}

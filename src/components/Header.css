@@ -1,0 +1,108 @@
+/* General header styles */
+.header {
+  background-color: #E5CA5A;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0;
+}
+
+h1 {
+ 
+    font-family: "Charmonman", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .charmonman-bold {
+    font-family: "Charmonman", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic-container {
+  width: 250px; 
+  height: 250px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  background-color: rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; 
+}
+
+/* Optional: Enlarge container on hover */
+.profile-pic-container:hover {
+  transform: scale(1.1); 
+}
+
+
+
+.profile-pic {
+  width: 250px; /* Increase size */
+  height: 250px; /* Increase size */
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover; /* Ensures the image fits within the circle */
+  transition: transform 0.3s ease; /* Optional: Add a hover effect */
+}
+
+
+.profile-pic:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: rippleEffect 0.6s ease-out;
+  z-index: 1;
+}
+
+/* Animation for ripple effect */
+@keyframes rippleEffect {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .profile-pic-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
+/* ----------------------------------- */
+
+
