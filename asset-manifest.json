@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.674bcdd0.css",
-    "main.js": "/portfolio/static/js/main.2055be1c.js",
+    "main.css": "/portfolio/static/css/main.d3f8201d.css",
+    "main.js": "/portfolio/static/js/main.b215b885.js",
     "static/media/image1.png": "/portfolio/static/media/image1.debb29d3daff36bef544.png",
+    "static/media/image6.png": "/portfolio/static/media/image6.f45c27e734920fc4dee4.png",
     "static/media/profile.jpg": "/portfolio/static/media/profile.f551433d71c2423d7439.jpg",
+    "static/media/image5.png": "/portfolio/static/media/image5.686204fe67a26826f518.png",
     "static/media/image2.png": "/portfolio/static/media/image2.32e597ab167bcdf51bb4.png",
     "static/media/image4.png": "/portfolio/static/media/image4.7d6c25b85c127220d219.png",
+    "static/media/SaurabhPatleResume.pdf": "/portfolio/static/media/SaurabhPatleResume.8a07c465541047f908ef.pdf",
     "static/media/image3.png": "/portfolio/static/media/image3.c2843716e39156819ebe.png",
     "static/media/nodejs.svg": "/portfolio/static/media/nodejs.ab2cc7047fb0e9cbd129f26a319597bf.svg",
     "static/media/react.svg": "/portfolio/static/media/react.598d90dd4f36234e376cbc6ccd571550.svg",
     "static/media/mysql.svg": "/portfolio/static/media/mysql.5dbd7ffb56a921cecde426cca82f0df4.svg",
+    "static/media/java.svg": "/portfolio/static/media/java.3dec1fe704244f3cf61d9c1aa9e5707c.svg",
     "static/media/redux.svg": "/portfolio/static/media/redux.a907b9f98d324503c0c0d9ac2991eb03.svg",
-    "static/media/github.svg": "/portfolio/static/media/github.5531be85d7a8d6f333e5c7136944a022.svg",
     "static/media/bootstrap.svg": "/portfolio/static/media/bootstrap.850b2688500c5f08f27395fe83670cf4.svg",
     "index.html": "/portfolio/index.html",
-    "static/media/java.svg": "/portfolio/static/media/java.844767d76c7076a2460132905b760048.svg",
-    "static/media/spring.svg": "/portfolio/static/media/spring.b39d866ef15303bd4182807431613051.svg",
+    "static/media/springboot.svg": "/portfolio/static/media/springboot.b39d866ef15303bd4182807431613051.svg",
     "static/media/javascript.svg": "/portfolio/static/media/javascript.7bb08cdbe94fc2dfc1b51be8c2dae551.svg",
-    "main.674bcdd0.css.map": "/portfolio/static/css/main.674bcdd0.css.map",
-    "main.2055be1c.js.map": "/portfolio/static/js/main.2055be1c.js.map"
+    "main.d3f8201d.css.map": "/portfolio/static/css/main.d3f8201d.css.map",
+    "main.b215b885.js.map": "/portfolio/static/js/main.b215b885.js.map"
   },
   "entrypoints": [
-    "static/css/main.674bcdd0.css",
-    "static/js/main.2055be1c.js"
+    "static/css/main.d3f8201d.css",
+    "static/js/main.b215b885.js"
   ]
 }
