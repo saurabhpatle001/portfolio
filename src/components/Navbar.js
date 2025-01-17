@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/global.css";
 
 const Navbar = () => {
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  let prevScrollPos = window.pageYOffset;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setIsNavbarVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      prevScrollPos = currentScrollPos;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -10,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isNavbarVisible ? "visible" : "hidden"}`}>
       <ul className="nav-list">
         <li className="nav-item" onClick={() => handleScroll("about")}>
           About
@@ -21,14 +37,11 @@ const Navbar = () => {
         <li className="nav-item" onClick={() => handleScroll("projects")}>
           Projects
         </li>
-        {/* <li className="nav-item" onClick={() => handleScroll("work-experience")}>
-          Work Experience
-        </li> */}
-        <li className="nav-item" onClick={() => handleScroll("Skills")}>
-           Skills
+        <li className="nav-item" onClick={() => handleScroll("skills")}>
+          Skills
         </li>
-        <li className="nav-item" onClick={() => handleScroll("Contact")}>
-           Contact
+        <li className="nav-item" onClick={() => handleScroll("contact")}>
+          Contact
         </li>
       </ul>
     </nav>

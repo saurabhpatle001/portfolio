@@ -5,10 +5,10 @@ import AboutMe from "./components/AboutMe";
 import Resume from "./components/Resume";
 import WorkExperience from "./components/WorkExperience";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact"; // Import Contact component
+import Contact from "./components/Contact";
 import Skills from './components/Skills';
 
-import "./styles/global.css"; // Global styles
+import "./styles/global.css"; 
 
 function App() {
   return (
@@ -27,13 +27,12 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
-      <section id="Skills"> 
+      <section id="skills"> 
         <Skills />
       </section>
-      <section id="contact"> 
+      <section id="contact">
         <Contact />
       </section>
-     
     </div>
   );
 }

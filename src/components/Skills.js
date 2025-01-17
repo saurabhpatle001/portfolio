@@ -1,12 +1,11 @@
 import React from "react";
-import "../styles/global.css"; // Adjust the path based on your folder structure
+import "../styles/global.css";
 
 const skillsData = [
   { name: "HTML5", percentage: "90%", icon: "fab fa-html5" },
   { name: "JavaScript", percentage: "70%", icon: "fab fa-js" },
   { name: "Node.js", percentage: "60%", icon: "fab fa-node-js" },
   { name: "Express.js", percentage: "85%", icon: "fas fa-server" },
-  { name: "MongoDB", percentage: "80%", icon: "fas fa-database" },
   { name: "MySQL", percentage: "90%", icon: "fas fa-database" },
   { name: "C/C++", percentage: "80%", icon: "fas fa-code" },
   { name: "Java", percentage: "70%", icon: "fab fa-java" },
@@ -17,7 +16,8 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <div className="skills-wrapper">
+    <div id="skills" className="skills-wrapper">
+      <h2 className="skills-heading">Skills</h2>
       <div className="skills-container">
         {skillsData.map((skill, index) => (
           <div key={index} className="skill-item">

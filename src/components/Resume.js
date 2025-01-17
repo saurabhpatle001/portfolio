@@ -1,13 +1,16 @@
 import React from "react";
-// import "./Resume.css";
 import "../styles/global.css";
+
+
+import resumeFile from "../assets/resume/SaurabhPatleResume.pdf";
 
 const Resume = () => {
   return (
     <div className="resume">
       <h2>My Resume</h2>
-      <a href="/path-to-your-resume.pdf" download className="resume-button">
-        View
+   
+      <a href={resumeFile} download="Saurabh-Patle-Resume.pdf" className="resume-button">
+        Download Resume
       </a>
     </div>
   );

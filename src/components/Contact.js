@@ -24,8 +24,12 @@ const Contact = () => {
           <input type="text" placeholder="Name" name="name" required />
           <input type="email" placeholder="Email" name="email" required />
         </div>
-        <input type="text" placeholder="Subject" name="subject" required />
-        <textarea placeholder="Message" name="message" required></textarea>
+        <div className="form-group">
+          <input type="text" placeholder="Subject" name="subject" required />
+        </div>
+        <div className="form-group">
+          <textarea placeholder="Message" name="message" required></textarea>
+        </div>
         <button type="submit" className="submit-btn">Submit</button>
       </form>
       <p className="made-with-love">

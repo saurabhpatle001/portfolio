@@ -1,63 +1,78 @@
 import React from "react";
-// import "./WorkExperience.css";
 import "../styles/global.css";
+
+import reactIcon from "../assets/react.svg";
+import reduxIcon from "../assets/redux.svg";
+import javascriptIcon from "../assets/javascript.svg";
+import nodejsIcon from "../assets/nodejs.svg";
+import javaIcon from "../assets/java.svg";
+import springbootIcon from "../assets/springboot.svg";
+import mysqlIcon from "../assets/mysql.svg";
+import bootstrapIcon from "../assets/bootstrap.svg";
 
 const WorkExperience = () => {
   const experiences = [
     {
-      title: "Frontend Developer Intern",
-      company: "TONY LLC.",
-      duration: "Nov - Feb'24",
+      title: "Fullstack Developer Intern",
+      company: "TONY LLC",
+      duration: "Nov - Feb 2024",
       description: [
-        "Working on Frontend of applications for automating option trading for clients",
+        "Develop new user-facing features using React.js and associated libraries (Redux, React Router, etc.).",
+        "Enhanced overall code quality and maintainability of the React applications.",
+        "Ensured cross-browser compatibility for improved user experience.",
+        "Collaborated with backend developers to integrate RESTful APIs.",
       ],
+      icons: [reactIcon, reduxIcon, javascriptIcon, nodejsIcon, bootstrapIcon],
     },
     {
       title: "Java Intern",
-      company: "Intern Pe.",
-      duration: "Aug - Oct '24",
+      company: "Intern Pe",
+      duration: "Aug - Oct 2024",
       description: [
-        "gggggggg",
+        "Developed backend modules for a web-based application.",
+        "Assisted in debugging and optimizing Java-based microservices.",
+        "Collaborated with team members to integrate APIs and database layers.",
       ],
+      icons: [javaIcon, springbootIcon, mysqlIcon],
     },
-    // {
-    //   title: "Community Lead",
-    //   company: "",
-    //   duration: "2022 - 2023",
-    //   description: [
-    //     "gjjjjhgjjfjjggjgjgjffjggj",
-    //   ],
-    // },
   ];
 
   return (
-    <section className="work-experience">
-      <h2>Work Experience</h2>
+    <div className="work-experience-container">
+      <h2 className="work-experience-title">Work Experience</h2>
       <div className="timeline">
-        {/* Loop through the experiences */}
         {experiences.map((exp, index) => (
-          <div key={index} className="timeline-item">
-            {/* Timeline icon (fixed in corners) */}
-            <div className="timeline-icon">
-              <span role="img" aria-label="briefcase">
-                👜
-              </span>
-            </div>
-            {/* Timeline content */}
-            <div className="timeline-content">
+          <div
+            key={index}
+            className={`timeline-item ${
+              index % 2 === 0 ? "right" : "left"
+            }`}
+          >
+            <div className="card">
               <h3>{exp.title}</h3>
-              <h4>{exp.company}</h4>
-              <p className="duration">{exp.duration}</p>
+              <p>{exp.company}</p>
+              <p>{exp.duration}</p>
               <ul>
-                {exp.description.map((desc, i) => (
-                  <li key={i}>{desc}</li>
+                {exp.description.map((desc, idx) => (
+                  <li key={idx}>{desc}</li>
                 ))}
               </ul>
+              <div className="tech-icons">
+                {exp.icons.map((icon, idx) => (
+                  <img
+                    key={idx}
+                    src={icon}
+                    alt="tech icon"
+                    className="tech-icon"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         ))}
+        <div className="vertical-line"></div>
       </div>
-    </section>
+    </div>
   );
 };
 
